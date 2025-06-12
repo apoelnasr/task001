@@ -94,7 +94,7 @@ def prepare_task_features(df, task_complexity, selected_skills, feature_columns,
 async def startup_event():
     global model, scaler, feature_columns, employee_ids, numerical_cols, all_skills
     # Load dataset from /data/ folder
-    dataset_path = os.path.join(os.path.dirname(__file__), 'data', 'balanced_simple_hr_ai_dataset.csv')
+    dataset_path = os.path.join(os.path.dirname(__file__), 'balanced_simple_hr_ai_dataset.csv')
     if not os.path.exists(dataset_path):
         raise RuntimeError("Dataset file not found")
     df = pd.read_csv(dataset_path)
